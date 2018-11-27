@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsenui.css">
+    <link rel="stylesheet" href="https://unpkg.com/onsenui/css/onsen-css-components.min.css">
+    <script src="https://unpkg.com/onsenui/js/onsenui.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+        crossorigin="anonymous"></script>
+    <script src="ejs.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script src="cordova.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCOitAKUQhFTZ_ayLGZczBF-mPTxd_8vXk",
+            authDomain: "shopee-1eff2.firebaseapp.com",
+            databaseURL: "https://shopee-1eff2.firebaseio.com",
+            projectId: "shopee-1eff2",
+            storageBucket: "shopee-1eff2.appspot.com",
+            messagingSenderId: "954641713547"
+        };
+        firebase.initializeApp(config);
+        // Initialize Cloud Firestore through Firebase
+        var db = firebase.firestore();
+        // Disable deprecated features
+        db.settings({
+            timestampsInSnapshots: true
+        });
+        firebase.auth().onAuthStateChanged(function (user) {
+        });
+    </script>
+    <style>
+        .toolbaricon {
+            padding-left: 5px;
+            padding-bottom: 5px;
+            padding-right: 5px;
+            color: green;
+        }
+    </style>
+</head>
+
+
+<body>
+    <ons-page>
+            <div style="text-align: center; margin-top: 30px;">
+        <p style="margin-top: 30px;">
+            <ons-button onclick="logout()">Log out</ons-button>
+        </p>
+        </div>
+    </ons-page>
+    <script>
+        function logout() {
+            firebase.auth().signOut().then(function () {
+                ons.notification.alert('Seee u agein');
+                window.location.href='index.html';
+                // Sign-out successful.
+            }).catch(function (error) {
+                // An error happened.
+            });
+        };
+    </script>
+</body>
+
+</html>

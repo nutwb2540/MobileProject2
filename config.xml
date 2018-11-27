@@ -28,8 +28,8 @@
     <plugin name="cordova-universal-links-plugin" spec="https://github.com/walteram/cordova-universal-links-plugin" />
     <plugin name="cordova-plugin-inappbrowser" spec="3.0.0" />
     <universal-links>
-        <host name="shopee702b4.page.link/rniX" scheme="https" />
-        <host name="shopee-702b4.firebaseapp.com" scheme="https">
+        <host name="shopee1eff2.page.link/rniX" scheme="https" />
+        <host name="shopee-1eff2.firebaseapp.com" scheme="https">
             <path url="/__/auth/callback" />
         </host>
         <preference name="AndroidLaunchMode" value="singleTask" />

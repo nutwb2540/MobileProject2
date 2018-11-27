@@ -35,6 +35,6 @@
         <preference name="AndroidLaunchMode" value="singleTask" />
     </universal-links>
     <plugin name="cordova-plugin-qrscanner" spec="^2.6.0" />
+    <engine name="android" spec="^7.1.1" />
     <engine name="browser" spec="^5.0.4" />
-    <engine name="android" spec="^7.1.2" />
 </widget>
